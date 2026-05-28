@@ -1,0 +1,24 @@
+data_dir = "/data/garage/data"
+metadata_dir = "/data/garage/meta"
+metadata_snapshots_dir = "/data/garage/snapshots"
+
+consistency_mode = "consistent"
+replication_factor = 3
+
+use_local_tz = true
+block_size = "1M"
+
+rpc_bind_addr = "0.0.0.0:3901"
+
+[s3_api]
+api_bind_addr = "0.0.0.0:3900"
+s3_region = "garage"
+
+[s3_web]
+bind_addr = "0.0.0.0:3902"
+root_domain = ".web.garage.local"
+index = "index.html"
+
+[admin]
+api_bind_addr = "0.0.0.0:3903"
+# trace_sink = "http://otel.local:4317"
