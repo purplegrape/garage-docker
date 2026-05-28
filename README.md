@@ -1,2 +1,2 @@
 # garage-docker
-docker image for garage object storage
+alpine-based docker image for garage object storage
