@@ -8,6 +8,7 @@ on:
 env:
   REGISTRY: ghcr.io
   IMAGE_NAME: garage
+  VERSION: v2.3.0
 
 jobs:
   build-and-push:
@@ -36,7 +37,7 @@ jobs:
           file: ./Dockerfile
           push: true
           tags: |
-            ${{ env.REGISTRY }}/${{ github.actor }}/${{ env.IMAGE_NAME }}:v2.3.0
+            ${{ env.REGISTRY }}/${{ github.actor }}/${{ env.IMAGE_NAME }}:${{ env.VERSION }}
           outputs: |
             type=image,compression=zstd,force-compression=true
           cache-from: type=gha
