@@ -1,9 +1,9 @@
 #!/bin/sh
 
 if [ -d /data/garage ]; then
-  chown nobody:nobody /data/garage
+  chown 65532:65532 /data/garage
 else
-  install -d -m 755 -o nobody -g nobody /data/garage
+  install -d -m 755 -o 65532 -g 65532 /data/garage
   echo "No garage data found in /data/garage, creating empty directory"
 fi
 
@@ -22,4 +22,4 @@ fi
 #   echo "GARAGE_METRICS_TOKEN not set, automatically generated random token: $GARAGE_METRICS_TOKEN"
 # fi
 
-exec su-exec nobody:nobody $@
+exec su-exec 65532:65532 $@
