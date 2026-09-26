@@ -8,7 +8,7 @@ on:
 env:
   REGISTRY: ghcr.io
   IMAGE_NAME: garage
-  VERSION: v2.3.0
+  VERSION: v2.4.1
 
 jobs:
   build-and-push:
