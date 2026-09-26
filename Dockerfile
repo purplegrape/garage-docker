@@ -1,5 +1,5 @@
 FROM alpine:3.23
-COPY --from=docker.io/dxflrs/garage:v2.3.0 --chmod=755 /garage /usr/bin/garage
+COPY --from=docker.io/dxflrs/garage:v2.4.1 --chmod=755 /garage /usr/bin/garage
 ADD --chmod=644 garage.toml /etc/garage.toml
 ADD --chmod=755 entrypoint.sh /entrypoint.sh
 
